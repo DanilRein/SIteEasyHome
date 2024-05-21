@@ -21,12 +21,12 @@
                 <nav class="header_nav">
                     <ul class="header_list">
                         <li class="header_item">
-                            <a href="/Site Team/index_2.html" class="header_link">
+                            <a href="index_2.html" class="header_link">
                                 <img src="./img/svg/about us button.svg" alt="About us" class="header_aboutus_button">
                             </a>
                         </li>
                         <li class="header_item">
-                            <a href="/Site Team/index_3.html" class="header_link">
+                            <a href="index_3.html" class="header_link">
                                 <img src="./img/svg/contacts button.svg" alt="Contacts" class="header_contacts_button">
                             </a>
                         </li>
@@ -89,13 +89,130 @@
                 </form>
             </div>
             <div class="searchButton">
-                <a href="#!" class="search_Button">
+                <a id="searchButton" class="search_Button" data-city="1">
                     <img src="./img/svg/Search button.svg" alt="Search" class="search_Button_pic">
                 </a>
+            </div>
             </div>
         </section>
     </main>
 
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var searchButton = document.getElementById('searchButton');
+
+            searchButton.addEventListener('click', function () {
+                var city = document.querySelector('.City input[name="radio"]:checked').value;
+                var price = document.querySelector('.Price select[name="drop_down"]').value;
+
+                if (city && price!='0') {
+
+                    var rssUrl;
+                    switch (city) {
+                        case '1': // Śródmieście
+                            switch (price) {
+                                case '1':
+                                    rssUrl = 'https://rss.app/feeds/bCer1cjiUc8eJR1j.xml'; // 1200-1600 PLN
+                                    break;
+                                case '2':
+                                    rssUrl = '#!';
+                                    break;
+                                case '3':
+                                    rssUrl = '#!URL for 2200-3000 PLN';
+                                    break;
+                                case '4':
+                                    rssUrl = 'URL for 3000-3600 PLN';
+                                    break;
+                                case '5':
+                                    rssUrl = 'URL for more than 3600 PLN';
+                                    break;
+                            }
+                            break;
+                        case '2': // Psie Pole
+                            switch (price) {
+                                case '1':
+                                    rssUrl = 'URL for 1200-1600 PLN';
+                                    break;
+                                case '2':
+                                    rssUrl = 'URL for 1600-2200 PLN';
+                                    break;
+                                case '3':
+                                    rssUrl = 'URL for 2200-3000 PLN';
+                                    break;
+                                case '4':
+                                    rssUrl = 'URL for 3000-3600 PLN';
+                                    break;
+                                case '5':
+                                    rssUrl = 'URL for more than 3600 PLN';
+                                    break;
+                            }
+                            break;
+                        case '3': // Fabryczna
+                            switch (price) {
+                                case '1':
+                                    rssUrl = 'URL for 1200-1600 PLN';
+                                    break;
+                                case '2':
+                                    rssUrl = 'URL for 1600-2200 PLN';
+                                    break;
+                                case '3':
+                                    rssUrl = 'URL for 2200-3000 PLN';
+                                    break;
+                                case '4':
+                                    rssUrl = 'URL for 3000-3600 PLN';
+                                    break;
+                                case '5':
+                                    rssUrl = 'URL for more than 3600 PLN';
+                                    break;
+                            }
+                            break;
+                        case '4': // Stare Miasto
+                            switch (price) {
+                                case '1':
+                                    rssUrl = 'URL for 1200-1600 PLN';
+                                    break;
+                                case '2':
+                                    rssUrl = 'URL for 1600-2200 PLN';
+                                    break;
+                                case '3':
+                                    rssUrl = 'URL for 2200-3000 PLN';
+                                    break;
+                                case '4':
+                                    rssUrl = 'URL for 3000-3600 PLN';
+                                    break;
+                                case '5':
+                                    rssUrl = 'URL for more than 3600 PLN';
+                                    break;
+                            }
+                            break;
+                        case '5': // Krzyki
+                            switch (price) {
+                                case '1':
+                                    rssUrl = 'URL for 1200-1600 PLN';
+                                    break;
+                                case '2':
+                                    rssUrl = 'URL for 1600-2200 PLN';
+                                    break;
+                                case '3':
+                                    rssUrl = 'URL for 2200-3000 PLN';
+                                    break;
+                                case '4':
+                                    rssUrl = 'URL for 3000-3600 PLN';
+                                    break;
+                                case '5':
+                                    rssUrl = 'URL for more than 3600 PLN';
+                                    break;
+                            }
+                            break;
+                    }
+
+                    window.location.href = 'search_results.html?city=' + city + '&rss_url=' + encodeURIComponent(rssUrl);
+                } else {
+                    alert('Please select both city and price.');
+                }
+            });
+        });
+    </script>
 </body>
 
 </html>

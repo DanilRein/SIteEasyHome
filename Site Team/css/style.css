@@ -224,6 +224,7 @@ body {
   top: 0;
   left: 0;
   width: 100%;
+  
 }
 
 .header_wrapper {
@@ -262,7 +263,7 @@ header_link:active {
 }
 
 .buttons {
-  padding-left: 20px;
+  padding-right: 10px;
   margin-top: 5px;
   font-size: 40px;
   background: url(../img/svg/Rectangle\ 2.svg);
