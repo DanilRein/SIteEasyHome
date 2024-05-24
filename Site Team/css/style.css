@@ -263,6 +263,14 @@ header_link:active {
   background: url(../img/svg/Hero.svg);
 }
 
+.CityAdd {
+  height: 700px;
+  padding-top: 188px;
+  padding-left: 10px;
+  font-size: 100px;
+  background: url(../img/svg/Hero.svg);
+}
+
 .buttons {
   padding-right: 10px;
   margin-top: 5px;
@@ -328,19 +336,16 @@ header_link:active {
   height: 20%;
 }
 
-.maxAndMinPrice {
-  font-family: 'Times New Roman', Times, serif;
-}
-
 .Price_list {
-  font-size: 24px;
+  font-family:Source Code Pro;
+  font-size: 28px;
   width: 30%;
   height: 80px;
   padding-left: 20px;
   border: 2px solid #000000;
   border-radius: 5px;
   outline: none;
-  background: #86bcda;
+  background: rgb(88, 154, 193);
   color: #010000;
 }
 
@@ -371,7 +376,8 @@ header_link:active {
 
 .Rectangle {
   font-family: 'Times New Roman', Times, serif;
-  font-size: 48px;
+  margin-top: 100px;
+  font-size: 32px;
   padding-top: 20px;
   padding-left: 20px;
   background: url(../img/svg/Rectangle\ 2.svg);
@@ -380,6 +386,7 @@ header_link:active {
 }
 
 .backButton {
+  font-family: Source Code Pro;
   font-size: 16px;
   position: fixed;
   bottom: 20px;
@@ -423,9 +430,6 @@ ul {
   margin-top: 80px;
   margin: 0 auto;
   padding: 20px;
-
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   background: url(../img/svg/Hero.svg);
 }
 
@@ -434,21 +438,17 @@ ul {
   margin-top: 100px;
 }
 
-/* /// */
-.searchButton {
-  position: relative;
-  display: inline-block;
-  cursor: pointer;
-  outline: none;
-  border: 0;
-  vertical-align: middle;
-  text-decoration: none;
-  font-size: inherit;
-  font-family: inherit;
-}
-
-
 .searchButton:hover {
   transform: translate(0, 0.03em);
   transition: 0.5s;
+}
+
+.Price{
+  margin-top: 40px;
+}
+
+.searchButton{
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
 }
