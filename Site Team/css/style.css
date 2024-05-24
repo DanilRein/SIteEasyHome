@@ -224,7 +224,8 @@ body {
   top: 0;
   left: 0;
   width: 100%;
-  
+  z-index: 1000;
+
 }
 
 .header_wrapper {
@@ -293,12 +294,30 @@ header_link:active {
   user-select: none;
 }
 
-.form_radio_btn input[type=radio]:checked+label {
-  background: #86bcda;
+.btn1 input[type=radio]:checked+label {
+  background: #6ed772;
+}
+
+.btn2 input[type=radio]:checked+label {
+  background: #74cbbe;
+}
+
+.btn3 input[type=radio]:checked+label {
+  background: #d7e477;
+}
+
+.btn4 input[type=radio]:checked+label {
+  background: #596dbc;
+}
+
+.btn5 input[type=radio]:checked+label {
+  background: #d24c4c;
 }
 
 .form_radio_btn label:hover {
-  color: #797979;
+  color: #100f0f;
+  transform: translate(0, 0.03em);
+  transition: 0.5s;
 }
 
 
@@ -358,4 +377,78 @@ header_link:active {
   background: url(../img/svg/Rectangle\ 2.svg);
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+.backButton {
+  font-size: 16px;
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
+}
+
+.backButton .button {
+
+
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #007BFF;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.backButton .button:hover,
+.backButton .button:focus,
+.backButton .button:active {
+  background-color: #0056b3;
+}
+
+
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+ul {
+  list-style: none;
+}
+
+.searchResults {
+  margin-top: 80px;
+  margin: 0 auto;
+  padding: 20px;
+
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background: url(../img/svg/Hero.svg);
+}
+
+.rssFeed {
+  margin-bottom: 20px;
+  margin-top: 100px;
+}
+
+/* /// */
+.searchButton {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  outline: none;
+  border: 0;
+  vertical-align: middle;
+  text-decoration: none;
+  font-size: inherit;
+  font-family: inherit;
+}
+
+
+.searchButton:hover {
+  transform: translate(0, 0.03em);
+  transition: 0.5s;
 }

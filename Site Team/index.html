@@ -45,33 +45,45 @@
             </div>
             <div class="buttons">
                 <p>
-                <div class="form_radio_btn">
-                    <input id="radio-1" type="radio" name="radio" value="1" checked>
-                    <label for="radio-1">Śródmieście</label>
+                <div class="btn1">
+                    <div class="form_radio_btn">
+                        <input id="radio-1" type="radio" name="radio" value="1" checked>
+                        <label for="radio-1">Śródmieście</label>
+                    </div>
                 </div>
                 </p>
                 <p>
-                <div class="form_radio_btn">
-                    <input id="radio-2" type="radio" name="radio" value="2">
-                    <label for="radio-2">Psie Pole</label>
+                <div class="btn2">
+                    <div class="form_radio_btn">
+                        <input id="radio-2" type="radio" name="radio" value="2">
+                        <label for="radio-2">Psie Pole</label>
+                    </div>
                 </div>
                 </p>
                 <p>
-                <div class="form_radio_btn">
-                    <input id="radio-3" type="radio" name="radio" value="3">
-                    <label for="radio-3">Fabryczna</label>
+                <div class="btn3">
+                    <div class="form_radio_btn">
+                        <input id="radio-3" type="radio" name="radio" value="3">
+                        <label for="radio-3">Fabryczna</label>
+                    </div>
                 </div>
+
                 </p>
                 <p>
-                <div class="form_radio_btn">
-                    <input id="radio-4" type="radio" name="radio" value="3">
-                    <label for="radio-4">Stare Miasto</label>
+                <div class="btn4">
+                    <div class="form_radio_btn">
+                        <input id="radio-4" type="radio" name="radio" value="3">
+                        <label for="radio-4">Stare Miasto</label>
+                    </div>
                 </div>
+
                 </p>
                 <p>
-                <div class="form_radio_btn">
-                    <input id="radio-5" type="radio" name="radio" value="3">
-                    <label for="radio-5">Krzyki</label>
+                <div class="btn5">
+                    <div class="form_radio_btn">
+                        <input id="radio-5" type="radio" name="radio" value="3">
+                        <label for="radio-5">Krzyki</label>
+                    </div>
                 </div>
                 </p>
 
@@ -105,7 +117,7 @@
                 var city = document.querySelector('.City input[name="radio"]:checked').value;
                 var price = document.querySelector('.Price select[name="drop_down"]').value;
 
-                if (city && price!='0') {
+                if (city && price != '0') {
 
                     var rssUrl;
                     switch (city) {
