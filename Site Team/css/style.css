@@ -264,7 +264,7 @@ header_link:active {
 }
 
 .CityAdd {
-  height: 700px;
+  height: 900px;
   padding-top: 188px;
   padding-left: 10px;
   font-size: 100px;
@@ -337,7 +337,7 @@ header_link:active {
 }
 
 .Price_list {
-  font-family:Source Code Pro;
+  font-family: Source Code Pro;
   font-size: 28px;
   width: 30%;
   height: 80px;
@@ -347,6 +347,7 @@ header_link:active {
   outline: none;
   background: rgb(88, 154, 193);
   color: #010000;
+  cursor: pointer;
 }
 
 .textArea {
@@ -370,12 +371,8 @@ header_link:active {
   height: 400px;
 }
 
-.searchButton {
-  padding-top: 50px;
-}
-
 .Rectangle {
-  font-family: 'Times New Roman', Times, serif;
+  font-family: Source Code Pro;
   margin-top: 100px;
   font-size: 32px;
   padding-top: 20px;
@@ -441,14 +438,24 @@ ul {
 .searchButton:hover {
   transform: translate(0, 0.03em);
   transition: 0.5s;
+  display: flex;
 }
 
-.Price{
+.Price {
   margin-top: 40px;
 }
 
-.searchButton{
+.searchButton {
+  /* display: inline-flex; */
   display: flex;
   justify-content: center;
   margin-top: 40px;
+  padding-top: 50px;
+  cursor: pointer;
+}
+
+.team {
+  display: flex;
+  justify-content: center;
+  font-size: 64px;
 }
