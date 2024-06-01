@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EasyHome</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="/Site Team/css/style.css">
 </head>
 
 <body>
@@ -13,7 +13,7 @@
         <div class="wrapper">
             <div class="header_wrapper">
                 <div class="header_logo">
-                    <a href="/Site Team/" class="header_logo_link">
+                    <a href="/Site Team/index.html" class="header_logo_link">
                         <img src="./img/svg/logo.svg" alt="EasyHome" class="header_logo_pic">
                     </a>
                 </div>
@@ -45,42 +45,32 @@
             </div>
             <div class="buttons">
                 <p>
-                <div class="btn1">
-                    <div class="form_radio_btn">
+                <div class="form_radio_btn">
+                    <div class="btn1">
                         <input id="radio-1" type="radio" name="radio" value="1" checked>
                         <label for="radio-1">Śródmieście</label>
                     </div>
-                </div>
-                </p>
-                <p>
-                <div class="btn2">
-                    <div class="form_radio_btn">
+                    </p>
+                    <p>
+                    <div class="btn2">
                         <input id="radio-2" type="radio" name="radio" value="2">
                         <label for="radio-2">Psie Pole</label>
                     </div>
-                </div>
-                </p>
-                <p>
-                <div class="btn3">
-                    <div class="form_radio_btn">
+                    </p>
+                    <p>
+                    <div class="btn3">
                         <input id="radio-3" type="radio" name="radio" value="3">
                         <label for="radio-3">Fabryczna</label>
                     </div>
-                </div>
-
-                </p>
-                <p>
-                <div class="btn4">
-                    <div class="form_radio_btn">
+                    </p>
+                    <p>
+                    <div class="btn4">
                         <input id="radio-4" type="radio" name="radio" value="3">
                         <label for="radio-4">Stare Miasto</label>
                     </div>
-                </div>
-
-                </p>
-                <p>
-                <div class="btn5">
-                    <div class="form_radio_btn">
+                    </p>
+                    <p>
+                    <div class="btn5">
                         <input id="radio-5" type="radio" name="radio" value="3">
                         <label for="radio-5">Krzyki</label>
                     </div>
@@ -118,109 +108,110 @@
                 var price = document.querySelector('.Price select[name="drop_down"]').value;
 
                 if (city && price != '0') {
-
-                    var rssUrl;
+                    var rssId;
+                    ;
                     switch (city) {
                         case '1': // Śródmieście
                             switch (price) {
                                 case '1':
-                                    rssUrl = 'https://rss.app/feeds/bCer1cjiUc8eJR1j.xml'; // 1200-1600 PLN
+
+                                    rssId = '8bj9dp1ohcytmo40'
                                     break;
                                 case '2':
-                                    rssUrl = '#!URL for 1600-2200 PLN'; //1600-2200 PLN
+                                    rssId = 'FK513eDbYha7czUC';
                                     break;
                                 case '3':
-                                    rssUrl = '#!URL for 2200-3000 PLN'; //2200-3000 PLN
+                                    rssId = 'sib5uiefwYh1VpEC';
                                     break;
                                 case '4':
-                                    rssUrl = 'URL for 3000-3600 PLN'; //3000-3600 PLN
+                                    rssId = 'X0pfFI7Yr0jIwMQv';
                                     break;
                                 case '5':
-                                    rssUrl = 'URL for more than 3600 PLN'; //more than 3600 PLN
+                                    rssId = 'l8naEKgBZFVXpxVN';
                                     break;
                             }
                             break;
                         case '2': // Psie Pole
                             switch (price) {
                                 case '1':
-                                    rssUrl = 'URL for 1200-1600 PLN'; //1200-1600 PLN
+                                    rssId = 'CtQUm2LpIHguiqa0';
                                     break;
                                 case '2':
-                                    rssUrl = 'URL for 1600-2200 PLN'; //1600-2200 PLN
+                                    rssId = '9lwgo531mykuPIhb';
                                     break;
                                 case '3':
-                                    rssUrl = 'URL for 2200-3000 PLN'; //2200-3000 PLN
+                                    rssId = 'mR5hDb8WjDEVFcgF';
                                     break;
                                 case '4':
-                                    rssUrl = 'URL for 3000-3600 PLN'; //3000-3600 PLN
+                                    rssId = 'AyA9GuKMB9H4u0pT';
                                     break;
                                 case '5':
-                                    rssUrl = 'URL for more than 3600 PLN'; //more than 3600 PLN
+                                    rssId = 'tgdswlXOdro9YMAZ';
                                     break;
                             }
                             break;
                         case '3': // Fabryczna
                             switch (price) {
                                 case '1':
-                                    rssUrl = 'URL for 1200-1600 PLN'; //1200-1600 PLN
+                                    rssId = 'hYZwr8a9DxPGJapB';
                                     break;
                                 case '2':
-                                    rssUrl = 'URL for 1600-2200 PLN'; //1600-2200 PLN
+                                    rssId = 'iMZOVdQmUwSNRw3B';
                                     break;
                                 case '3':
-                                    rssUrl = 'URL for 2200-3000 PLN'; //2200-3000 PLN
+                                    rssId = 'eAa39MyGuQO2nPFS';
                                     break;
                                 case '4':
-                                    rssUrl = 'URL for 3000-3600 PLN'; //3000-3600 PLN
+                                    rssId = 'YnFl13gWlIaFnykU';
                                     break;
                                 case '5':
-                                    rssUrl = 'URL for more than 3600 PLN'; //more than 3600 PLN
+                                    rssId = 'xbpGLNIPXta1BRjV';
                                     break;
                             }
                             break;
                         case '4': // Stare Miasto
                             switch (price) {
                                 case '1':
-                                    rssUrl = 'URL for 1200-1600 PLN'; //1200-1600 PLN
+                                    rssId = 'cPHr4rNJfthnuQKz';
                                     break;
                                 case '2':
-                                    rssUrl = 'URL for 1600-2200 PLN'; //1600-2200 PLN
+                                    rssId = 'lzdoOUcQ6MRjHpKs';
                                     break;
                                 case '3':
-                                    rssUrl = 'URL for 2200-3000 PLN'; //2200-3000 PLN
+                                    rssId = 'TiRgv8ucrLAH3tRM';
                                     break;
                                 case '4':
-                                    rssUrl = 'URL for 3000-3600 PLN'; //3000-3600 PLN
+                                    rssId = 't4J3djau60rbvgcy';
                                     break;
                                 case '5':
-                                    rssUrl = 'URL for more than 3600 PLN'; //more than 3600 PLN
+                                    rssId = '5BZQQkWTkmui9sKC';
                                     break;
                             }
                             break;
                         case '5': // Krzyki
                             switch (price) {
                                 case '1':
-                                    rssUrl = 'URL for 1200-1600 PLN'; //1200-1600 PLN
+                                    rssId = 'vxfcOrW0dP4v0HuR';
                                     break;
                                 case '2':
-                                    rssUrl = 'URL for 1600-2200 PLN'; //1600-2200 PLN
+                                    rssId = 'aa6bKe36cPxiOaxy';
                                     break;
                                 case '3':
-                                    rssUrl = 'URL for 2200-3000 PLN'; //2200-3000 PLN
+                                    rssId = 'NWtfsD2ytbrETXPB';
                                     break;
                                 case '4':
-                                    rssUrl = 'URL for 3000-3600 PLN'; //3000-3600 PLN
+                                    rssId = 'HY5I8AOjJQJjfzm1';
                                     break;
                                 case '5':
-                                    rssUrl = 'URL for more than 3600 PLN'; //more than 3600 PLN
+                                    rssId = 'iTSXLHg54LtzAHy7';
                                     break;
                             }
                             break;
                     }
+                    window.location.href = 'search_results.html?id=' + encodeURIComponent(rssId);
 
-                    window.location.href = 'search_results.html?city=' + city + '&rss_url=' + encodeURIComponent(rssUrl);
                 } else {
-                    alert('Please select both city and price.');
+                    alert('Please select the price.');
                 }
             });
         });

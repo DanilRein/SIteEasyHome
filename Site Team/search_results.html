@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
+    <title>Search Results</title>
+    <link rel="stylesheet" href="/Site Team/css/style.css">
 </head>
 
 <body>
@@ -12,7 +13,7 @@
         <div class="wrapper">
             <div class="header_wrapper">
                 <div class="header_logo">
-                    <a href="/Site Team/" class="header_logo_link">
+                    <a href="/Site Team/index.html" class="header_logo_link">
                         <img src="./img/svg/logo.svg" alt="EasyHome" class="header_logo_pic">
                     </a>
                 </div>
@@ -33,65 +34,44 @@
             </div>
         </div>
     </header>
-    <main class="main">
-        <section class="searchResults">
-            
-            <div class="rssFeed">
-               
-                <rssapp-wall id="bCer1cjiUc8eJR1j"></rssapp-wall>
-                <script src="https://widget.rss.app/v1/wall.js" type="text/javascript" async></script>
+    
+    <main class="main"> 
+        <section class="searchResults"> 
+            <div class="rssFeed" id="rssFeed">
+              
             </div>
             <div class="backButton">
-                <a href="/Site Team/" class="button">Back to Home</a>
+                <a href="/Site Team/index.html" class="button">Back to Home</a>
             </div>
         </section>
     </main>
-</body>
-
-</html>
-
 
     <script>
         document.addEventListener('DOMContentLoaded', function () {
-            
             var urlParams = new URLSearchParams(window.location.search);
-            var city = urlParams.get('city');
-            var rssUrl = urlParams.get('rss_url');
-
-            if (city && rssUrl) {
-        
-                fetch(rssUrl)
-                    .then(response => response.text())
-                    .then(xmlString => {
-                        var parser = new DOMParser();
-                        var xmlDoc = parser.parseFromString(xmlString, 'text/xml');
-
-                    
-                        var items = xmlDoc.querySelectorAll('item');
-
-                        var rssFeedsHTML = '';
-                        items.forEach(item => {
-                            var title = item.querySelector('title').textContent;
-                            var link = item.querySelector('link').textContent;
-                            var description = item.querySelector('description').textContent;
-                            rssFeedsHTML += '<div class="feedItem">';
-                            rssFeedsHTML += '<h3><a href="' + link + '">' + title + '</a></h3>';
-                            rssFeedsHTML += '<p>' + description + '</p>';
-                            rssFeedsHTML += '</div>';
-                        });
-
-                        var rssFeedsContainer = document.querySelector('.rssFeeds');
-                        rssFeedsContainer.innerHTML = rssFeedsHTML;
-                    })
-                    .catch(error => console.error('Error fetching RSS feed:', error));
-            } else {
+            var rssId = urlParams.get('id');
             
+
+            if (rssId) {
+                var rssFeedContainer = document.getElementById('rssFeed');
+
+                
+                var rssWall = document.createElement('rssapp-wall');
+                rssWall.setAttribute('id', rssId);
+                rssFeedContainer.appendChild(rssWall);
+
+                
+                var rssScript = document.createElement('script');
+                rssScript.src = 'https://widget.rss.app/v1/wall.js';
+                rssScript.type = 'text/javascript';
+                rssScript.async = true;
+                rssFeedContainer.appendChild(rssScript);
+            } else {
                 var searchResultsSection = document.querySelector('.searchResults');
-                searchResultsSection.innerHTML = '<p>Error: Missing parameters.</p>';
+                searchResultsSection.innerHTML = '<p>Error: Missing RSS ID parameter.</p>';
             }
         });
     </script>
-
 </body>
 
 </html>
